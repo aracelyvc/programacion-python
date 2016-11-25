@@ -16,7 +16,7 @@ def intereses(x):
     sum=x+i
     return sum
 x = input()
-print "en 2 año tu saldo sera:", intereses(x)
+print "en 2 años tu saldo sera:", intereses(x)
 print "ingresa nuevamente tu saldo inicial"
 def intereses(x):
     sum=0
@@ -24,4 +24,4 @@ def intereses(x):
     sum=x+i
     return sum
 x = input()
-print "en 3 año tu saldo sera:", intereses(x)
+print "en 3 años tu saldo sera:", intereses(x)
