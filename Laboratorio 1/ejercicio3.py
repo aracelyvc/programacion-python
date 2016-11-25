@@ -1,6 +1,6 @@
 #Aracely Velazquez Calderon
 #Introduccion a la Programacion en python 3
-#22/11/2016
+#Laboratorio 1
 
 import math
 def calcula(radio):
