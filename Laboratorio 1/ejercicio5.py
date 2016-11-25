@@ -1,3 +1,7 @@
+#Aracely Velazquez Calderon
+#Introduccion a la Programacion en Python
+#Laboratorio 1
+
 num=int(input("ingrese los segundos\n"))
 dia=(int(num/86400.0))
 hor=int((num-(dia*86400))/3600.0)
