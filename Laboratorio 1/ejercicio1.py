@@ -1,6 +1,6 @@
 #Aracely Velazquez Calderon
-#Introduccion a la Programacion en python 1
-#22/11/2016
+#Introduccion a la Programacion en python
+#Laboratorio 1
 
 def calcular(x):
     sum=0
