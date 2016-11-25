@@ -1,6 +1,6 @@
 #Aracely Velazquez Calderon
 #Introduccion a la Programacion en python 3
-#22/11/2016
+#Laboratorio 1
 
 print "tiempo de viaje en: dias, horas, minutos, y segundos"
 def tiempo(dias,horas,minutos,segundos):
