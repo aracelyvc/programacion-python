@@ -12,5 +12,6 @@ e=[a,b,c,d]
 print e
 sum=0
 for i in e:
-    sum += i
+    a = int(i)
+    sum = sum + a
     print sum
