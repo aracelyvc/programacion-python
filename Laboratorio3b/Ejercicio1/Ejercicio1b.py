@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #Aracely Velázquez Calderón
 #Laboratorio 3b
 #Dic. 2016
