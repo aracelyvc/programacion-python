@@ -3,40 +3,30 @@
 #25/11/2016
 #Ejercicio 3
 
-x=input("ingresa solo las cooerdenadas en x, para los vertices del triangulo:")
-y=input("ingresa solo las cooerdenadas en y, para los vertices del triangulo:")
-triangulo=([x],[y])
 import matplotlib.pyplot as plt
-plt.plot(triangulo)
-plt.plot(triangulo[[0],[0]])
-plt.show()
+import matplotlib.patches as mpatches
+import numpy as np
 
-def funcion(triangulo):
-    a=(triangulo[0],triangulo[0])
-    b=(tiangulo[1],triangulo[1])
-    c=(triangulo[2],triangulo[2])
-    nt=[a,b,c]
-    i=a+c/2
-    nnt=[i,b,c]
-    plt.plot(i,b,c)
-    plt.show()
-    j=b+c/2
-    nnnt=[i,j,c]
-    plt.plot(i,j,c)
-    plt.show()
-    k=i+c/2
-    nnnnt=[k,j,c]
-    plt.plot(k,j,c)
-    plt.show()
-    l=j+c/2
-    nnnnnt=[k,l,c]
-    plt.plot(k,l,c)
-    plt.show()
-    m=k+c/2
-    nnnnnnt=[m,l,c]
-    plt.plot(m,l,c)
-    plt.show()
-    n=l+c/2
-    nnnnnnnt=[m,n,c]
-    plt.plot(m,n,c)
-    plt.show()
+def get_triangle(P):
+    m = P * 0.5
+    n = P * 0.5 + np.array([0.5, 0])
+    k = P * 0.5 + np.array([0.25, np.sqrt(3)/4])
+    return np.array([m,n,k])
+
+# triangulo unitario inicial
+triangle = np.array([[0, 0],
+              [1, 0],
+              [0.5, np.sqrt(3)/2]])
+
+# Crea un array que representa el triangulo Sierpinski hasta la etapa deseada
+etapa = 5
+for e in range(etapa):
+    triangle = get_triangle(triangle)
+
+# Se procede a graficar el triangulo
+fig1 = plt.figure()
+ax1 = fig1.add_subplot(111, aspect='equal')
+for t in triangle.reshape(3**etapa,3,2):
+    ax1.add_patch(mpatches.Polygon(t, fc="y"))
+
+plt.show()
